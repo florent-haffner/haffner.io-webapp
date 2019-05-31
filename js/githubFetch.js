@@ -10,8 +10,7 @@ request.open('GET', 'https://api.github.com/users/nelth-fr/repos', true);
 request.onload = function() {
     var data = JSON.parse(this.response);
     if (request.status >= 200 && request.status < 400) {
-
-        // Table structure
+        // Table
         var table = document.createElement('table');
         table.setAttribute('class', 'table')
         app.appendChild(table);
@@ -57,7 +56,6 @@ request.onload = function() {
         const errorMessage = document.createElement('marquee');
         errorMessage.textContent = `Error during GitHub fetching`;
         app.appendChild(errorMessage);
-
     }
 };
 request.send();
