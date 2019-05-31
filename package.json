@@ -1,11 +1,11 @@
 {
-    "title": "nelth.io",
-    "name": "nelth.io",
+    "title": "Florent HAFFNER",
+    "name": "nelth-fr.github.io",
     "version": "5.0.5",
     "scripts": {
         "start": "gulp watch"
     },
-    "description": "GitHub page - nelth-fr",
+    "description": "Florent HAFFNER - GitHub page",
     "keywords": [
         "css",
         "sass",
