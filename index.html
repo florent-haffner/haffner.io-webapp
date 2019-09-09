@@ -1,210 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Florent HAFFNER - GitHub page">
-  <meta name="author" content="Florent HAFFNER">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Florent HAFFNER</title>
+    <meta
+      name="Florent HAFFNER"
+      content="Portfolio website"
+    />
 
-  <title>Florent HAFFNER</title>
-
-  <!-- Bootstrap Core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon.ico" />
-  <!-- Custom Fonts -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+  <!-- Create-React-App CSS -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body id="page-top">
-
-  <!-- Navigation -->
-  <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
-  </a>
-  <nav id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">haffner.io</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#page-top">Home</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#skills">Skills</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#projects">Projects</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Header -->
-  <header class="masthead d-flex">
-    <div class="container text-center my-auto">
-      <h1 class="mb-1 text-white">Florent HAFFNER</h1>
-      <h3 class="mb-5 text-faded">
-        Software developer / Photographer / Ex-Chemist
-      </h3>
-      <a class="btn btn-success btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-    </div>
-    <div class="overlay"></div>
-  </header>
-
-  <!-- About -->
-  <section class="content-section bg-light">
-    <div class="container text-center">
-      <div class="row" id="about">
-        <div class="content-section-heading">
-          <h2>About me</h2>
-          <p class="lead mb-5">I've played a lot with Linux, HTML/CSS and the Lua programming language as a teenager and
-            was always interested by technology but I never realised Software development was something for me.
-            After few years working in Chemical industry, I wanted to get back in university to explore a deeper world
-            so I learned by my own the fundamentals of development and switch from Chemistry to Software.</p>
-          <p class="lead mb-5">Currently I'm studying in Bachelor at UHA 4.0 (University of Upper Alsace - France)
-            working on real projects with local companies.</p>
-          <p class="lead mb-5">I'm a huge fan of music (Jazz, Rock, Progressive-metal) and some part of my photography
-            projects are on <a href="https://www.instagram.com/fh.nelth/">Instagram</a>.</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#projects">My current projects</a>
-        </div>
+<body>
+  <div class="App">
+    <div class="App-header">
+      <h1>Florent HAFFNER</h1>
+      <h5>Software Developer / Photographer / Ex-Chemist.</h5>
+      <div class="container text-left">
+        <p class="lead mt-5">
+          I've spend few years working on Chemical industry, my work needed to learn new stuff and solving problems 
+          but I decided to get back at University to explore deeper worlds.
+          Currently I am in last year of undergraduate at Université de Haute-Alsace (France) working with local company on meaningful projects.
+        </p>
+        <p class="lead mt-3">I have a lot of interest in Machine Learning, Scalable distributed systems and back-end
+          development.</p>
+        <p class="lead mt-3">I'm also a huge fan of music and have a photography projects on <a
+            href="https://www.instagram.com/fh.nelth/">Instagram</a>.</p>
+        <h3 class="mt-5 text-center">
+          <a href="https://www.linkedin.com/in/florent-haffner-31ab5911b/">LinkedIn</a> | <a
+            href="https://twitter.com/nelth_fr">Twitter</a> | <a href="https://github.com/nelth-fr">GitHub</a>
+        </h3>
       </div>
     </div>
-  </section>
-
-  <!-- Skills-->
-  <section class="content-section bg-dark text-center" id="skills">
-    <div class="container">
-      <div class="content-section-heading">
-        <h2 class="text-white mb-4">Technical Skills</h2>
-      </div>
-      <div class="card-group">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Proficient Languages</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Java</li>
-              <li class="list-group-item">Python</li>
-              <li class="list-group-item">C++</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Framework and libraries</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Spring & Hibernate</li>
-              <li class="list-group-item">Qt, React.js, Bootstrap</li>
-              <li class="list-group-item">JUnit</li>
-              <li class="list-group-item">Numpy</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Server and databases</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">JBoss</li>
-              <li class="list-group-item">JHipster & Keycloak</li>
-              <li class="list-group-item">PostgreSQL, MongoDB</li>
-              <li class="list-group-item">ElasticSearch</li>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tools</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Confluence, Jira</li>
-              <li class="list-group-item">JetBrains products & Vim</li>
-              <li class="list-group-item">Unix & Docker</li>
-              <li class="list-group-item">Git</li>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="content-section" id="projects">
-    <div class="container">
-      <div class="content-section-heading text-center">
-        <h2 class="mb-5">Open projects on GitHub</h2>
-      </div>
-      <div id="root"></div>
-    </div>
-  </section>
-
-  <!-- Ventures -->
-  <section class="content-section">
-    <div class="container text-center">
-      <h2 class="mb-4">Futur ventures...</h2>
-      <ul class="list-group list-group-horizontal-md justify-content-center">
-        <li class="list-group-item">3D Engine (Unity, Unreal)</li>
-        <li class="list-group-item">Machine Learning</li>
-        <li class="list-group-item">Scalable distributed system</li>
-        <li class="list-group-item">Embedded Systems & IoT</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center" id="contact">
-    <div class="container">
-      <h6 class="justify-content-center mb-3 text-uppercase">Stay connected</h6>
-      <ul class="list-group list-group-horizontal justify-content-center mb-5">
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="https://github.com/nelth-fr">
-            <i class="icon-social-github"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3"
-            href="https://www.linkedin.com/in/florent-haffner-31ab5911b/">
-            <i class="icon-social-linkedin"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/nelth_fr">
-            <i class="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/fh.nelth/">
-            <i class="icon-social-instagram"></i>
-          </a>
-        </li>
-      </ul>
-      <p class="small mb-0">Copyright &copy; haffner.io 2019</p>
-    </div>
-  </footer>
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Script for fetching GitHub repos -->
-  <script src="js/githubFetch.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/stylish-portfolio.min.js"></script>
 
 </body>
-
 </html>
