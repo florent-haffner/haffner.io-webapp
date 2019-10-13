@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Row, Col, Tab, ListGroup } from 'react-bootstrap';
 
 class Projects extends Component {
     state = {
@@ -20,36 +20,50 @@ class Projects extends Component {
             return <div className="spinner-border justify-content-center" role="status" />
         }
 
-        const OrderinAscDate = () => {}
+        const OrderinAscDate = () => { }
 
-        // eslint-disable-next-line
-        const RenderingProjectStateList = projects.map(((data, i) => {
+        const RenderingListGroupItem = projects.map(((data, i) => {
             if (i >= 0 && i < 5) {
                 return (
-                    <div className="mt-3 mb-3">
-                        <Card className="text-center" key={data.id}>
-                            <Card.Header as="h5">{data.name}</Card.Header>
-                            <Card.Body>
-                                <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
-                                <Card.Text className="text-left">{data.description}</Card.Text>
-                                <Button variant="primary" href={data.html_url}>Exploring</Button>
-                            </Card.Body>
-                        </Card>
-                    </div>
+                    <ListGroup.Item action href={`#${data.id}`}>
+                        {data.name}
+                    </ListGroup.Item>
                 )
-            };
+            }
+        }))
+
+        const RenderingTabPane = projects.map((data => {
+            return (
+                <Tab.Pane eventKey={`#${data.id}`}>
+                    <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
+                    <p className="mt-4 mb-4">
+                        {data.description}
+                    </p>
+                    <Button variant="success" href={data.html_url}>Exploring this project</Button>
+                </Tab.Pane>
+            )
         }))
 
         return (
             <div className="mini-spacer">
-                <h4 className="mb-4">Last public projects</h4>
-                    {OrderinAscDate}
-                    {RenderingProjectStateList}
-                <Button
-                    variant="primary"
-                    size="lg" className="mt-3"
-                    href="https://github.com/nelth-fr"> Overview
-                </Button>
+                <h4 className="title-spacer">Last public ventures</h4>
+
+                {OrderinAscDate}
+
+                <Tab.Container id="list-group-tabs" defaultActiveKey={`#${this.state.projects[0].id}`}>
+                    <Row>
+                        <Col sm={4}>
+                            <ListGroup>
+                                {RenderingListGroupItem}
+                            </ListGroup>
+                        </Col>
+                        <Col sm={8}>
+                            <Tab.Content>
+                                {RenderingTabPane}
+                            </Tab.Content>
+                        </Col>
+                    </Row>
+                </Tab.Container>
             </div>
         );
     }

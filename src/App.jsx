@@ -6,6 +6,7 @@ import Project from './Components/Projects';
 import Header from './Components/Header';
 import About from './Components/About';
 import Skills from './Components/Skills';
+import Bottom from './Components/Bottom';
 
 class App extends Component {
   render() {
@@ -14,14 +15,11 @@ class App extends Component {
       <div className="text-center">
         <Header />
         <About />
-        <div className="row">
-          <div className="col-md-12 col-lg-8">
-            <Skills />
-          </div>
-          <div className="col-md-12 col-lg-3">
-            <Project />
-          </div>
+        <div className="container">
+          <Skills />
+          <Project />
         </div>
+        <Bottom />
       </div>
     );
   }
