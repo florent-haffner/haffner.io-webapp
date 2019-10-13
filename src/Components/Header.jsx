@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <h1>
-                Header
-            </h1>
-            // Bring some beautiful animation | picture there
+            <div className="App">
+                <div className="App-header">
+                    <h1>Florent HAFFNER</h1>
+                    <h5>Software Developer / Photographer / Ex-Chemist.</h5>
+                </div>
+            </div>
         );
     }
 }

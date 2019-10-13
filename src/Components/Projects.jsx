@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 
 class Projects extends Component {
     state = {
@@ -16,31 +16,38 @@ class Projects extends Component {
 
     render() {
         const { projects, isLoading } = this.state;
-        if (isLoading) { return <div className="spinner-border justify-content-center" role="status" /> }
+        if (isLoading) {
+            return <div className="spinner-border justify-content-center" role="status" />
+        }
+
+        const OrderinAscDate = () => {}
+
         // eslint-disable-next-line
-        const MappingThroughProject = projects.map(((data, i) => {
-            if (i >= 0 && i <= 5) {
+        const RenderingProjectStateList = projects.map(((data, i) => {
+            if (i >= 0 && i < 5) {
                 return (
-                    <div className="card bg-dark text-white mt-2 mb-2" key={data.id}>
-                        <div className="card-body">
-                            <h4 className="card-title"><a href={data.html_url}>{data.name}</a>
-                            </h4>
-                            <span className="card-subtitle text-muted">{data.language}</span>
-                        </div>
+                    <div className="mt-3 mb-3">
+                        <Card className="text-center" key={data.id}>
+                            <Card.Header as="h5">{data.name}</Card.Header>
+                            <Card.Body>
+                                <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
+                                <Card.Text className="text-left">{data.description}</Card.Text>
+                                <Button variant="primary" href={data.html_url}>Exploring</Button>
+                            </Card.Body>
+                        </Card>
                     </div>
                 )
             };
         }))
 
         return (
-            <div className="col-3">
-                <h3 className="mb-4">Last public projects</h3>
-
-                {MappingThroughProject}
-
+            <div className="mini-spacer">
+                <h4 className="mb-4">Last public projects</h4>
+                    {OrderinAscDate}
+                    {RenderingProjectStateList}
                 <Button
-                    variant="outline-primary"
-                    className="mt-3"
+                    variant="primary"
+                    size="lg" className="mt-3"
                     href="https://github.com/nelth-fr"> Overview
                 </Button>
             </div>
