@@ -15,7 +15,7 @@ class App extends Component {
       <div className="text-center">
         <Header />
         <About />
-        <div className="container">
+        <div className="main-content text-center container">
           <Skills />
           <Project />
         </div>

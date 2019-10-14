@@ -4,7 +4,7 @@ import { Table } from 'react-bootstrap';
 class Skills extends Component {
     render() {
         return (
-            <div className="text-center mini-spacer">
+            <div className="skills mini-spacer">
                 <h4 className="title-spacer">Technical skills</h4>
                 <Table hover>
                     <thead>

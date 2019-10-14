@@ -46,7 +46,7 @@ class Projects extends Component {
         }))
 
         return (
-            <div className="mini-spacer">
+            <div className="venter mini-spacer">
                 <h4 className="title-spacer">Last public ventures</h4>
 
                 {OrderinAscDate}

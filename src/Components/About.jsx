@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class About extends Component {
     render() {
         return (
-            <div className="mini-spacer">
+            <div className="about mini-spacer">
                 <div className="container align-middle text-left">
                     <h4>About</h4>
                     <p className="lead">
