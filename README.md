@@ -1,4 +1,4 @@
-# haffner.io
+# haffner.io | ![TravisStatus](https://travis-ci.org/nelth-fr/haffner.io.svg?branch=master)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
