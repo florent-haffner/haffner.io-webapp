@@ -20,13 +20,11 @@ class Projects extends Component {
             return <div className="spinner-border justify-content-center" role="status" />
         }
 
-        const OrderinAscDate = () => { }
-
         // eslint-disable-next-line
         const RenderingListGroupItem = projects.map(((data, i) => {
             if (i >= 0 && i < 5) {
                 return (
-                    <ListGroup.Item action href={`#${data.id}`}>
+                    <ListGroup.Item action href={`#${data.id}`} key={data.id}>
                         {data.name}
                     </ListGroup.Item>
                 )
@@ -34,23 +32,29 @@ class Projects extends Component {
         }))
 
         const RenderingTabPane = projects.map((data => {
-            return (
-                <Tab.Pane eventKey={`#${data.id}`}>
-                    <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
-                    <p className="mt-4 mb-4">
-                        {data.description}
-                    </p>
-                    <Button variant="success" href={data.html_url}>Exploring this project</Button>
-                </Tab.Pane>
-            )
+            if (data.homepage !== "") {
+                return (
+                    <Tab.Pane eventKey={`#${data.id}`} key={data.id}>
+                        <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
+                        <p className="mt-4 mb-4">{data.description}</p>
+                        <p><Button variant="dark" href={data.html_url}>Explore the code</Button></p>
+                        <p><Button variant="success" href={data.homepage}>View deploiement</Button></p>
+                    </Tab.Pane>
+                )
+            } else {
+                return (
+                    <Tab.Pane eventKey={`#${data.id}`} key={data.id}>
+                        <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
+                        <p className="mt-4 mb-4">{data.description}</p>
+                        <Button variant="dark" href={data.html_url}>Exploring the code</Button>
+                    </Tab.Pane>
+                )
+            }
         }))
 
         return (
             <div className="venter mini-spacer">
                 <h4 className="title-spacer">Last public ventures</h4>
-
-                {OrderinAscDate}
-
                 <Tab.Container id="list-group-tabs" defaultActiveKey={`#${this.state.projects[0].id}`}>
                     <Row>
                         <Col sm={4}>
