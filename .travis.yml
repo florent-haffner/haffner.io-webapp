@@ -12,11 +12,8 @@ notifications:
 script:
   - npm test
   - npm run build
-  - npm run deploy
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: master
+  provider: netlify
+  site: gallant-bardeen-11c2e8
+  auth: <encrypted auth>
+  local_dir: "build/"
