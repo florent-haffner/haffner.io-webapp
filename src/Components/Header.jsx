@@ -6,7 +6,7 @@ class Header extends Component {
             <div className="header">
                 <div className="App-header">
                     <h1>Florent HAFFNER</h1>
-                    <h5>Software Developer / Photographer / Ex-Chemist.</h5>
+                    <h5>Software Developer</h5>
                 </div>
             </div>
         );
