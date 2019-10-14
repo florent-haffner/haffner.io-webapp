@@ -22,6 +22,7 @@ class Projects extends Component {
 
         const OrderinAscDate = () => { }
 
+        // eslint-disable-next-line
         const RenderingListGroupItem = projects.map(((data, i) => {
             if (i >= 0 && i < 5) {
                 return (

@@ -40,9 +40,7 @@
 }
 
 /* Img size */
-.img{
-  max-width: 10%;
-  max-height: 10%;
-  height: auto;
-  width: auto;
+.img-spacer{
+  margin-left: 5vh;
+  margin-right: 5vh;
 }
