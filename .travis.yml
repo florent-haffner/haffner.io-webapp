@@ -11,7 +11,7 @@ notifications:
   email:       false
 script:
   - npm test
-  - gulp
+  - deploy
 deploy:
   provider: pages
   skip_cleanup: true
