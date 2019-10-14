@@ -11,6 +11,7 @@ notifications:
   email:       false
 script:
   - npm test
+  - npm build
 deploy:
   provider: pages
   skip_cleanup: true
