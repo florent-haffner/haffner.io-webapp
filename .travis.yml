@@ -4,12 +4,20 @@ git:
 node_js:
   - "node"
 install:       npm install
-script:
-  - npm test
-  - npm run deploy
-  - gulp
 cache:
   directories:
     - node_modules
 notifications:
   email:       false
+
+script:
+  - npm test
+  - gulp
+  - npm run deploy
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
