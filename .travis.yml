@@ -12,7 +12,7 @@ notifications:
 script:
   - npm test
   - npm run build
-  - npm install -g serve && serve -s build
+  - npm run deploy
 deploy:
   provider: pages
   skip_cleanup: true
