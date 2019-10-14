@@ -15,6 +15,6 @@ script:
 deploy:
   provider: netlify
   site: gallant-bardeen-11c2e8
-  auth: <encrypted auth>
+  auth: $GITHUB_TOKEN
   edge: true # opt in to dpl v2
   local_dir: "build/"
