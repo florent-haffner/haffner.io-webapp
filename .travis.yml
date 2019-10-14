@@ -11,7 +11,8 @@ notifications:
   email:       false
 script:
   - npm test
-  - npm run deploy
+  - npm run build
+  - npm install -g serve && serve -s build
 deploy:
   provider: pages
   skip_cleanup: true
