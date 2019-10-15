@@ -19,8 +19,8 @@ addons:
 
 script:
   - npm test
-  - npm run build
   - sonar-scanner
+  - npm run build
 
 deploy:
   provider: netlify
