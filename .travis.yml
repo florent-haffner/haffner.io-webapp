@@ -9,9 +9,19 @@ cache:
     - node_modules
 notifications:
   email:       false
+
+dist: trusty
+addons:
+  sonarcloud:
+    organization: "nelth-fr"
+    token:
+      secure: $TRAVIS_TOKEN
+
 script:
   - npm test
   - npm run build
+  - sonar-scanner
+
 deploy:
   provider: netlify
   site: dc414cbf-402d-4ee6-87a3-997935441a3c
