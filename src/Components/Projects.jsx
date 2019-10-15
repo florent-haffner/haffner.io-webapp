@@ -38,7 +38,8 @@ class Projects extends Component {
                         <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
                         <p className="mt-4 mb-4">{data.description}</p>
                         <p><Button variant="dark" href={data.html_url}>Explore the code</Button></p>
-                        <p><Button variant="success" href={data.homepage}>View deploiement</Button></p>
+                        <p><Button variant="success" href={data.homepage}>View deployement</Button></p>
+                        <Card.Text><small className="text-muted">Deployement on Heroku may take until 15s to resume.</small></Card.Text>
                     </Tab.Pane>
                 )
             } else {
