@@ -1,4 +1,7 @@
-# haffner.io | ![TravisStatus](https://travis-ci.org/nelth-fr/haffner.io.svg?branch=master)
+# haffner.io
+
+![TravisStatus](https://travis-ci.org/nelth-fr/haffner.io.svg?branch=master)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dc414cbf-402d-4ee6-87a3-997935441a3c/deploy-status)](https://app.netlify.com/sites/haffner-io/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
