@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { WhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
+import Typical from '../components/Typical/Index'
 
 const HeadingPrimary = ({ children }) => {
     return (
@@ -8,7 +9,8 @@ const HeadingPrimary = ({ children }) => {
             color: `#fff`,
             textTransform: `uppercase`,
             backfaceVisibility: `hidden`,
-            marginBottom: `2vh`
+            marginBottom: `2vh`,
+            textAlign: `left`
         }}>
             {children}
         </div>
@@ -29,9 +31,9 @@ const BrandBox = ({ children }) => {
 export default class AppHeader extends Component {
     state = {
         pro: [
-            'an Ex-Physicist',
-            'a Software developer',
-            'a Photographer'
+            'an Ex-Physicist.', 500,
+            'a Photographer.', 1000,
+            'a Software developer.', 1000
         ]
     }
     render() {
@@ -44,10 +46,13 @@ export default class AppHeader extends Component {
                 </BrandBox>
                 <TextBox>
                     <HeadingPrimary>
-                        <h1>Hi I'm Florent HAFFNER,</h1>
-                        <h5>
-                            {this.state.pro[1]} from France
-                        </h5>
+                        <h3>Hi I'm</h3>
+                        <h1>Florent HAFFNER,</h1>
+                        <Typical
+                            steps={this.state.pro}
+                            loop={1}
+                            wrapper="h3"
+                        />
                     </HeadingPrimary>
                 </TextBox>
             </div>

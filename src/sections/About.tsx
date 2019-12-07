@@ -17,7 +17,7 @@ export default class About extends Component {
                         </p>
                         <p className="lead">
                             Beyond this, I'm a huge fan of music and have a photography projects
-                            on <Link to={`https://www.instagram.com/fh.nelth/`}>Instagram</Link>
+                            on <Link to={`https://www.instagram.com/fh.nelth/`}>Instagram</Link>.
                         </p>
                     </div>
                 </MiniSpacer>
