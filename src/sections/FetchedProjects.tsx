@@ -3,7 +3,7 @@ import { Button, Card, Row, Col, Tab, ListGroup } from 'react-bootstrap';
 import TextSpacer from '../components/TextSpacer'
 import MiniSpacer from '../components/MiniSpacer';
 
-class Projects extends Component {
+class FetchedProjects extends Component {
     state = {
         projects: [],
         isLoading: Boolean
@@ -94,4 +94,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects;
+export default FetchedProjects;

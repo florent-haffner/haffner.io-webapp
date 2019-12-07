@@ -9,6 +9,7 @@ const HeadingPrimary = ({ children }) => {
             color: `#fff`,
             textTransform: `uppercase`,
             backfaceVisibility: `hidden`,
+            marginTop: `4vh`,
             marginBottom: `2vh`,
             textAlign: `left`
         }}>
@@ -20,8 +21,8 @@ const BrandBox = ({ children }) => {
     return (
         <div style={{
             position: `absolute`,
-            top: `6vh`,
-            left: `4vh`
+            top: `4vh`,
+            left: `3vh`
         }}>
             {children}
         </div>
@@ -46,7 +47,7 @@ export default class AppHeader extends Component {
                 </BrandBox>
                 <TextBox>
                     <HeadingPrimary>
-                        <h3>Hi I'm</h3>
+                        <span style={{ fontSize: `1.2em`, fontWeight: 550 }}>Hi I'm</span>
                         <h1>Florent HAFFNER,</h1>
                         <Typical
                             steps={this.state.pro}
