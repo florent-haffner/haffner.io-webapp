@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Typical from 'react-typical'
+
 import { WhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
-import Typical from '../components/Typical/Index'
 
 const HeadingPrimary = ({ children }) => {
     return (
