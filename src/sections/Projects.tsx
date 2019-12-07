@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, Row, Col, Tab, ListGroup } from 'react-bootstrap';
+import TextSpacer from '../components/TextSpacer'
+import MiniSpacer from '../components/MiniSpacer';
 
 class Projects extends Component {
     state = {
@@ -32,21 +34,33 @@ class Projects extends Component {
         }))
 
         const RenderingTabPane = projects.map((data => {
-            if (data.homepage !== "") {
+            if (data.homepage !== "") { // If there is a deployement link
                 return (
                     <Tab.Pane eventKey={`#${data.id}`} key={data.id}>
-                        <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
-                        <p className="mt-4 mb-4">{data.description}</p>
-                        <p><Button variant="dark" href={data.html_url}>Explore the code</Button></p>
-                        <p><Button variant="success" href={data.homepage}>View deployement</Button></p>
-                        <Card.Text><small className="text-muted">Deployement on Heroku may take until 15s to resume.</small></Card.Text>
+                        <Card.Text><small className="text-muted">
+                            {data.language}</small>
+                        </Card.Text>
+                        <TextSpacer>
+                            {data.description}
+                        </TextSpacer>
+                        <p><Button variant="dark" 
+                            href={data.html_url}>Explore the code</Button></p>
+                        <p><Button variant="success" 
+                            href={data.homepage}>View deployement</Button></p>
+                        <Card.Text><small className="text-muted">
+                            Deployement on Heroku may take until 15s to resume.</small>
+                        </Card.Text>
                     </Tab.Pane>
                 )
             } else {
                 return (
                     <Tab.Pane eventKey={`#${data.id}`} key={data.id}>
-                        <Card.Text><small className="text-muted">{data.language}</small></Card.Text>
-                        <p className="mt-4 mb-4">{data.description}</p>
+                        <Card.Text><small className="text-muted">
+                            {data.language}</small>
+                        </Card.Text>
+                        <TextSpacer>
+                            {data.description}
+                        </TextSpacer>
                         <Button variant="dark" href={data.html_url}>Exploring the code</Button>
                     </Tab.Pane>
                 )
@@ -54,9 +68,14 @@ class Projects extends Component {
         }))
 
         return (
-            <div className="venter mini-spacer">
-                <h4 className="title-spacer">Last public ventures</h4>
-                <Tab.Container id="list-group-tabs" defaultActiveKey={`#${this.state.projects[0].id}`}>
+            <MiniSpacer>
+                <TextSpacer>
+                    <h4>Last GitHub ventures</h4>
+                </TextSpacer>
+                <Tab.Container
+                    id="list-group-tabs"
+                    defaultActiveKey={`#${this.state.projects[0].id}`}
+                >
                     <Row>
                         <Col sm={4}>
                             <ListGroup>
@@ -70,7 +89,7 @@ class Projects extends Component {
                         </Col>
                     </Row>
                 </Tab.Container>
-            </div>
+            </MiniSpacer>
         );
     }
 }

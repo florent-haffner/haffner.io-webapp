@@ -1,46 +1,61 @@
 /* ORIGINAL React-style */
-.App {
-  text-align: center;
+.header {
+  	height: 50vh;
+  	background-image: 
+	  linear-gradient(to right bottom, 
+     rgb(69, 36, 99),
+     rgb(134, 70, 194)
+     );
+	background-size: cover;
+  	background-position: top;
+  	position: relative;
+  	clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 45vh,
+      0 100%
+    );
 }
-.App-header {
-  background-color: #282c34;
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.brand-box {
+  	position: absolute;
+  	top: 40px;
+  	left: 40px;
 }
-.App-link {
-  color: #61dafb;
+.brand { font-size: 20px; }
+.text-box {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
 }
+.heading-primary {
+  	color: #fff;
+  	text-transform: uppercase;
 
-/* Margin management */
-.spacer {
-  margin-top: 12vh;
-  margin-bottom: 12vh;
+  	backface-visibility: hidden;
+  	margin-bottom: 30px;
 }
-.mini-spacer {
-  margin-top: 6vh;
-  margin-bottom: 6vh;
+.heading-primary-main {
+  	display: block;
+  	font-size: 26px;
+  	font-weight: 400;
+  	letter-spacing: 5px;
 }
-.title-spacer {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+.heading-primary-sub {
+  	display: block;
+  	font-size: 18px;
+  	font-weight: 700;
+  	letter-spacing: 7.4px;
 }
-.black-background {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 15vh;
-  color: white;
-}
-
-/* Img size */
-.img-spacer{
-  margin-left: 5vh;
-  margin-right: 5vh;
+.footer {
+  	height: 20vh;
+  	background-image: 
+	  linear-gradient(to left bottom, 
+     #343a40,
+     #1d2024
+     );
+	background-size: cover;
+  	background-position: top;
+  	position: relative;
 }

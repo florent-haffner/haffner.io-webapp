@@ -3,21 +3,21 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Project from './sections/Projects';
-import Header from './sections/Header';
+import AppHeader from './sections/AppHeader';
 import About from './sections/About';
-import Bottom from './sections/Bottom';
+import AppFooter from './sections/AppFooter';
 
 class App extends Component {
   render() {
     return (
       // Global Layout
       <div className="text-center">
-        <Header />
+        <AppHeader />
         <About />
         <div className="main-content text-center container">
           <Project />
         </div>
-        <Bottom />
+        <AppFooter />
       </div>
     );
   }
