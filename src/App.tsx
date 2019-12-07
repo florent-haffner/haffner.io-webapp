@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Project from './Components/Projects';
-import Header from './Components/Header';
-import About from './Components/About';
-import Skills from './Components/Skills';
-import Bottom from './Components/Bottom';
+import Project from './sections/Projects';
+import Header from './sections/Header';
+import About from './sections/About';
+import Bottom from './sections/Bottom';
 
 class App extends Component {
   render() {
@@ -16,7 +15,6 @@ class App extends Component {
         <Header />
         <About />
         <div className="main-content text-center container">
-          <Skills />
           <Project />
         </div>
         <Bottom />
