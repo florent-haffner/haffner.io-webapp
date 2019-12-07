@@ -80,8 +80,8 @@ export const TwitterIcon = ({ fill = 'white' }) => (
 
 export const LinkedinIcon = ({ fill = 'white' }) => (
   <svg
-    width="22"
-    height="22"
+    width="24"
+    height="24"
     viewBox="0 0 14 14"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,11 @@ export const MediumIcon = ({ fill = 'white' }) => (
 )
 
 export const GithubIcon = ({ fill = 'white' }) => (
-  <svg width="22" height="22" viewBox="0 0 13 13" version="1.1">
+  <svg 
+    width="26" 
+    height="26" 
+    viewBox="0 0 13 13" 
+    version="1.1">
     <g fill="none">
       <g id="git-icon">
         <path

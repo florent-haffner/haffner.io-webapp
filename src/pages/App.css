@@ -9,12 +9,12 @@
 	background-size: cover;
   	background-position: top;
   	position: relative;
-  	clip-path: polygon(
+  	/* clip-path: polygon(
       0 0,
       100% 0,
       100% 45vh,
       0 100%
-    );
+    ); */
 }
 .brand { font-size: 20px; }
 .footer {

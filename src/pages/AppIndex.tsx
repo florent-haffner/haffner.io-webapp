@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Project from './sections/Projects';
-import AppHeader from './sections/AppHeader';
-import About from './sections/About';
-import AppFooter from './sections/AppFooter';
+import Project from '../sections/Projects';
+import AppHeader from '../sections/AppHeader';
+import About from '../sections/About';
+import AppFooter from '../sections/AppFooter';
 
-class App extends Component {
+class AppIndex extends Component {
   render() {
     return (
       // Global Layout
@@ -23,4 +23,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppIndex;

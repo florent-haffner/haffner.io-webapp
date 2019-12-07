@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from '../assets/icons';
-import Link from '../components/Link';
+import { LinkedinIcon, InstagramIcon } from '../assets/icons';
+import GitHub from '../assets/icons/github-white-32.png'
+import { WhiteLink as SpacedWhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
-
 
 export default class AppFooter extends Component {
     render() {
@@ -10,15 +10,15 @@ export default class AppFooter extends Component {
             <div className="footer container-fluid">
                 <div className="d-flex justify-content-center">
                     <TextBox>
-                        <Link to={`https://github.com/nelth-fr`}>
-                            <GithubIcon />
-                        </Link>
-                        <Link to={`https://www.linkedin.com/in/florent-haffner-31ab5911b/`}>
+                        <SpacedWhiteLink to={`https://github.com/nelth-fr`}>
+                            <img src={GitHub} alt="Github icon" />
+                        </SpacedWhiteLink>
+                        <SpacedWhiteLink to={`https://www.linkedin.com/in/florent-haffner-31ab5911b/`}>
                             <LinkedinIcon />
-                        </Link>
-                        <Link to={`https://www.instagram.com/fh.nelth`}>
+                        </SpacedWhiteLink>
+                        <SpacedWhiteLink to={`https://www.instagram.com/fh.nelth`}>
                             <InstagramIcon />
-                        </Link>
+                        </SpacedWhiteLink>
                     </TextBox>
                 </div>
             </div>

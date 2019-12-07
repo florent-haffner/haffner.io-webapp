@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MiniSpacer from '../components/MiniSpacer'
+import { Link } from '../components/Link';
 
 export default class About extends Component {
     render() {
@@ -9,15 +10,14 @@ export default class About extends Component {
                     <div className="container" style={{
                         textAlign: `left`
                     }}>
-                        <h4>About</h4>
                         <p className="lead">
-                            I've spend a few years working on Chemical industry, in my occupation I had to
-                            learn new things and solve problems everyday and I liked it
-                            but I decided to get back at University to explore deeper worlds.
+                            I came from Chemical Engineering were I've learned efficiency and reliability.
+                            Few years ago the idea of upgrading my possibilities spread through my mind and 
+                            I decided to get back at University to learn Software engineering.
                         </p>
                         <p className="lead">
-                            I'm also a huge fan of music and have a photography projects
-                            on <a href="https://www.instagram.com/fh.nelth/">Instagram</a>
+                            Beyond this, I'm a huge fan of music and have a photography projects
+                            on <Link to={`https://www.instagram.com/fh.nelth/`}>Instagram</Link>
                         </p>
                     </div>
                 </MiniSpacer>

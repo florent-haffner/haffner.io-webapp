@@ -24,7 +24,7 @@ class Projects extends Component {
 
         // eslint-disable-next-line
         const RenderingListGroupItem = projects.map(((data, i) => {
-            if (i >= 0 && i < 5) {
+            if (i >= 0 && i < 6) {
                 return (
                     <ListGroup.Item action href={`#${data.id}`} key={data.id}>
                         {data.name}

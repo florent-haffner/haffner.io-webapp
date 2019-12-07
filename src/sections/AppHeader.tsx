@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Link from '../components/Link';
+import { WhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
 
 const HeadingPrimary = ({ children }) => {
@@ -26,7 +26,6 @@ const BrandBox = ({ children }) => {
     )
 }
 
-
 export default class AppHeader extends Component {
     state = {
         pro: [
@@ -39,15 +38,15 @@ export default class AppHeader extends Component {
         return (
             <div className="header">
                 <BrandBox>
-                    <Link to={`https://haffner.io`}>
+                    <WhiteLink to={`https://haffner.io`}>
                         haffner.io
-                    </Link>
+                    </WhiteLink>
                 </BrandBox>
                 <TextBox>
                     <HeadingPrimary>
-                        <h1>Florent HAFFNER</h1>
+                        <h1>Hi I'm Florent HAFFNER,</h1>
                         <h5>
-                            I'm {this.state.pro[1]} from France
+                            {this.state.pro[1]} from France
                         </h5>
                     </HeadingPrimary>
                 </TextBox>
