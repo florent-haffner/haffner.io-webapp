@@ -1,5 +1,31 @@
 import React, { Component } from 'react';
 import Link from '../components/Link';
+import TextBox from '../components/TextBox';
+
+const HeadingPrimary = ({ children }) => {
+    return (
+        <div style={{
+            color: `#fff`,
+            textTransform: `uppercase`,
+            backfaceVisibility: `hidden`,
+            marginBottom: `2vh`
+        }}>
+            {children}
+        </div>
+    )
+}
+const BrandBox = ({ children }) => {
+    return (
+        <div style={{
+            position: `absolute`,
+            top: `6vh`,
+            left: `4vh`
+        }}>
+            {children}
+        </div>
+    )
+}
+
 
 export default class AppHeader extends Component {
     state = {
@@ -12,20 +38,19 @@ export default class AppHeader extends Component {
     render() {
         return (
             <div className="header">
-                <div className="brand-box">
+                <BrandBox>
                     <Link to={`https://haffner.io`}>
                         haffner.io
                     </Link>
-                </div>
-                <div className="text-box">
-                    <div className="heading-primary">
-                    <h1>Florent HAFFNER</h1>
-                    <h5>
-                        I'm {this.state.pro[1]} from France
-                    </h5>
-
-                    </div>
-                </div>
+                </BrandBox>
+                <TextBox>
+                    <HeadingPrimary>
+                        <h1>Florent HAFFNER</h1>
+                        <h5>
+                            I'm {this.state.pro[1]} from France
+                        </h5>
+                    </HeadingPrimary>
+                </TextBox>
             </div>
         );
     }

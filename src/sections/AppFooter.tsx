@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from '../assets/icons';
 import Link from '../components/Link';
+import TextBox from '../components/TextBox';
 
 
 export default class AppFooter extends Component {
@@ -8,7 +9,7 @@ export default class AppFooter extends Component {
         return (
             <div className="footer container-fluid">
                 <div className="d-flex justify-content-center">
-                    <div className="text-box">
+                    <TextBox>
                         <Link to={`https://github.com/nelth-fr`}>
                             <GithubIcon />
                         </Link>
@@ -18,7 +19,7 @@ export default class AppFooter extends Component {
                         <Link to={`https://www.instagram.com/fh.nelth`}>
                             <InstagramIcon />
                         </Link>
-                    </div>
+                    </TextBox>
                 </div>
             </div>
         );

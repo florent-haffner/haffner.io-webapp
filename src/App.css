@@ -1,4 +1,4 @@
-/* ORIGINAL React-style */
+/* Basics Header and footer properties */
 .header {
   	height: 50vh;
   	background-image: 
@@ -16,39 +16,7 @@
       0 100%
     );
 }
-.brand-box {
-  	position: absolute;
-  	top: 6vh;
-	left: 4vh;
-}
 .brand { font-size: 20px; }
-.text-box {
-	margin-top: 4vh;
-  	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-  	text-align: center;
-}
-.heading-primary {
-  	color: #fff;
-  	text-transform: uppercase;
-
-  	backface-visibility: hidden;
-  	margin-bottom: 30px;
-}
-.heading-primary-main {
-  	display: block;
-  	font-size: 26px;
-  	font-weight: 400;
-  	letter-spacing: 5px;
-}
-.heading-primary-sub {
-  	display: block;
-  	font-size: 18px;
-  	font-weight: 700;
-  	letter-spacing: 7.4px;
-}
 .footer {
   	height: 20vh;
   	background-image: 
