@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../assets/css/Index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import AppHeader from '../sections/AppHeader';
+import { TextCenter, ContainerCentered } from '../components/Container'
+
+import SinglePageHeader from '../sections/SinglePageHeader';
 import About from '../sections/About';
 import FetchedProjects from '../sections/FetchedProjects';
-import AppFooter from '../sections/AppFooter';
+import Footer from '../sections/Footer';
 
 class AppIndex extends Component {
   render() {
     return (
       // Global Layout
-      <div className="text-center">
-        <AppHeader />
+      <TextCenter>
+        <SinglePageHeader />
         <About />
-        <div className="main-content text-center container">
+        <ContainerCentered>
           <FetchedProjects />
-        </div>
-        <AppFooter />
-      </div>
+        </ContainerCentered>
+        <Footer />
+      </TextCenter>
     );
   }
 }

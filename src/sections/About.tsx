@@ -12,12 +12,16 @@ export default class About extends Component {
                     }}>
                         <p className="lead">
                             I've worked in Chemical Engineering were I've learned efficiency and reliability.
-                            After some years the idea of upgrading my possibilities spread through my mind and 
-                            I decided to get back at University to learn Software engineering.
                         </p>
                         <p className="lead">
-                            Beyond this, I'm a huge fan of music and have a photography projects
-                            on <Link to={`https://www.instagram.com/fh.nelth/`}>Instagram</Link>.
+                            During this period I took lots of time beside my work to learn about Architecture, 
+                            Photography and the idea of upgrading my possibilities spread through my mind.
+                            I decided to get back at University and learn Software engineering.
+                        </p>
+                        <p className="lead">
+                            You can watch my open projects 
+                            on <Link to={`https://www.instagram.com/fh.nelth/`}>Instagram</Link> or <
+                                Link to={`https://www.linkedin.com/in/florent-haffner-31ab5911b/`}>LinkedIn</Link>.
                         </p>
                     </div>
                 </MiniSpacer>
