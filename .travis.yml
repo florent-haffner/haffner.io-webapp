@@ -20,7 +20,6 @@ addons:
       secure: $TRAVIS_TOKEN
 
 script:
-  - npm test
   - sonar-scanner
   - npm run build
 
