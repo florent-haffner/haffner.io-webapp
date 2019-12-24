@@ -30,7 +30,7 @@ const BrandBox = ({ children }) => {
     )
 }
 
-export default class AppHeader extends Component {
+export default class SinglePageHeader extends Component {
     state = {
         pro: [
             'an Ex-Physicist.', 500,

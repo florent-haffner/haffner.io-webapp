@@ -4,7 +4,7 @@ import GitHub from '../assets/icons/github-white-32.png'
 import { WhiteLink as SpacedWhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
 
-export default class AppFooter extends Component {
+export default class Footer extends Component {
     render() {
         return (
             <div className="footer container-fluid">

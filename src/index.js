@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import AppIndex from './pages/AppIndex';
+
+import AppIndex from './pages/Index';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<AppIndex />, document.getElementById('root'));
