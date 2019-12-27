@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 .header {
 	font-family: 'Open Sans', sans-serif;
-  	padding: 20vh;
+  	padding: 30vh;
   	background-image: 
 	  linear-gradient(to right bottom, 
      rgb(69, 36, 99),
@@ -12,6 +12,9 @@
 	position: relative;
 }
 .header h1{
+	margin-bottom: 5vh;
+}
+.header h5{
 	margin-bottom: 2vh;
 }
 
@@ -27,7 +30,7 @@
 }
 
 .footer {
-	padding: 3vh;
+	margin: 8vh 0 0 0;
 	color: #7C7C7C;
   	background-image: 
 	  linear-gradient(to left bottom, 
@@ -37,4 +40,19 @@
 	background-size: cover;
   	background-position: top;
   	position: relative;
+}
+
+@media screen and (min-width: 768px) {
+	.header{
+		padding: 25vh;
+	}
+	.header h1{
+		margin-bottom: 2vh;
+	}
+	.header h5{
+		margin-bottom: 1vh;
+	}
+	.footer{
+		padding: 4vh;
+	}
 }
