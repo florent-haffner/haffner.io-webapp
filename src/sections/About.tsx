@@ -11,17 +11,15 @@ export default class About extends Component {
                         textAlign: `left`
                     }}>
                         <p className="lead">
-                            I've worked in Chemical Engineering were I've learned efficiency and reliability.
+                            I've worked five years in Chemical Engineering were I've learned efficiency and reliability.
                         </p>
                         <p className="lead">
-                            During this period I took lots of time beside my work to learn about Architecture, 
-                            Photography and the idea of upgrading my possibilities spread through my mind.
+                            During this period I took lots of time beside my work to study Architecture, 
+                            Photography and Design. The idea of upgrading my possibilities spread through my mind.
                             I decided to get back at University and learn Software engineering.
                         </p>
                         <p className="lead">
-                            You can watch my open projects 
-                            on <Link to={`https://www.instagram.com/fh.nelth/`}>Instagram</Link> or <
-                                Link to={`https://www.linkedin.com/in/florent-haffner-31ab5911b/`}>LinkedIn</Link>.
+                            Currently  I'm waiting (2020/03/03) to start an Internship in Lyon at <Link to={`https://finalgo.fr`}>Finalgo</Link> to validate my Bachelor.
                         </p>
                     </div>
                 </MiniSpacer>

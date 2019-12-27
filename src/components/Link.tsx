@@ -6,12 +6,12 @@ const WhiteLink = ({ to, children }) => (
     style={{
       color: `white`,
       textDecoration: `underline`,
-      marginLeft: `1em`, marginRight: `1em`
     }}
   >
     {children}
   </a>
 );
+
 
 const Link = ({ to, children }) => (
   <a 

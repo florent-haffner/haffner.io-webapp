@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import '../assets/css/Index.scss'
+import '../assets/css/Index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { TextCenter, ContainerCentered } from '../components/Container'
+import { TextCenter, ContainerAlignCenter } from '../components/Container'
 
-import SinglePageHeader from '../sections/SinglePageHeader';
+import IndexHeader from '../sections/IndexHeader';
 import About from '../sections/About';
 import FetchedProjects from '../sections/FetchedProjects';
 import Footer from '../sections/Footer';
@@ -12,17 +12,15 @@ import Footer from '../sections/Footer';
 class AppIndex extends Component {
   render() {
     return (
-      // Global Layout
       <TextCenter>
-        <SinglePageHeader />
+        <IndexHeader />
         <About />
-        <ContainerCentered>
+        <ContainerAlignCenter>
           <FetchedProjects />
-        </ContainerCentered>
+        </ContainerAlignCenter>
         <Footer />
       </TextCenter>
     );
   }
 }
-
 export default AppIndex;

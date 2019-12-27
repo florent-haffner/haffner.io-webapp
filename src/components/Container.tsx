@@ -10,7 +10,7 @@ const Container = ({ children }) => {
     )
 }
 
-const ContainerCentered = ({ children }) => {
+const ContainerAlignCenter = ({ children }) => {
     return (
         <div className="container" style={{
             textAlign: `center`
@@ -28,4 +28,4 @@ const TextCenter = ({ children }) => {
     )
 }
 
-export { Container, ContainerCentered, TextCenter }
+export { Container, ContainerAlignCenter, TextCenter }
