@@ -8,7 +8,7 @@ export default class Footer extends Component {
 
     Year() {
         let currentYear = new Date().getFullYear()
-        this.setState({ date: currentYear})
+        this.setState({ date: currentYear })
     }
 
     componentDidMount() {
@@ -17,12 +17,10 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <div className="footer container-fluid">
-                <div className="d-flex justify-content-center">
-                    <TextBox>
-                        <p>Copyright © {this.state.date}, Florent HAFFNER</p>
-                    </TextBox>
-                </div>
+            <div className="footer">
+                <TextBox>
+                    <p>Copyright © {this.state.date}, Florent HAFFNER</p>
+                </TextBox>
             </div>
         );
     }

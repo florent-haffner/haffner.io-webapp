@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MiniSpacer from '../components/MiniSpacer'
+import { Container } from '../components/Container'
 import { Link } from '../components/Link';
 
 export default class About extends Component {
@@ -7,9 +8,7 @@ export default class About extends Component {
         return (
             <>
                 <MiniSpacer>
-                    <div className="container" style={{
-                        textAlign: `left`
-                    }}>
+                    <Container>
                         <p className="lead">
                             I've worked five years in Chemical Engineering were I've learned efficiency and reliability.
                         </p>
@@ -21,7 +20,7 @@ export default class About extends Component {
                         <p className="lead">
                             Currently  I'm waiting (2020/03/03) to start an Internship in Lyon at <Link to={`https://finalgo.fr`}>Finalgo</Link> to validate my Bachelor.
                         </p>
-                    </div>
+                    </Container>
                 </MiniSpacer>
             </>
         );
