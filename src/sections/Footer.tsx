@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
-import { LinkedinIcon, InstagramIcon } from '../assets/icons';
-import GitHub from '../assets/icons/github-white-32.png'
-import { WhiteLink as SpacedWhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
 
 export default class Footer extends Component {
+    state = {
+        date: ''
+    }
+
+    Year() {
+        let currentYear = new Date().getFullYear()
+        this.setState({ date: currentYear})
+    }
+
+    componentDidMount() {
+        this.Year()
+    }
+
     render() {
         return (
             <div className="footer container-fluid">
                 <div className="d-flex justify-content-center">
                     <TextBox>
-                        <SpacedWhiteLink to={`https://github.com/nelth-fr`}>
-                            <img src={GitHub} alt="Github icon" />
-                        </SpacedWhiteLink>
-                        <SpacedWhiteLink to={`https://www.linkedin.com/in/florent-haffner-31ab5911b/`}>
-                            <LinkedinIcon />
-                        </SpacedWhiteLink>
-                        <SpacedWhiteLink to={`https://www.instagram.com/fh.nelth`}>
-                            <InstagramIcon />
-                        </SpacedWhiteLink>
+                        <p>Copyright © {this.state.date}, Florent HAFFNER</p>
                     </TextBox>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Typical from 'react-typical'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { WhiteLink } from '../components/Link';
 import TextBox from '../components/TextBox';
 
@@ -8,11 +9,10 @@ const HeadingPrimary = ({ children }) => {
     return (
         <div style={{
             color: `#fff`,
-            textTransform: `uppercase`,
             backfaceVisibility: `hidden`,
             marginTop: `4vh`,
             marginBottom: `2vh`,
-            textAlign: `left`
+            textAlign: `center`
         }}>
             {children}
         </div>
@@ -29,15 +29,23 @@ const BrandBox = ({ children }) => {
         </div>
     )
 }
+const SocialLink = () => {
+    return (
+        <div className="iconbar">
+            <a className="spacedlink" href={`https://github.com/nelth-fr`}>
+                <FontAwesomeIcon icon={faGithub} size={`lg`}/>
+            </a>
+            <a className="spacedlink" href={`https://www.linkedin.com/in/florent-haffner-31ab5911b/`}>
+                <FontAwesomeIcon icon={faLinkedinIn} size={`lg`}/>
+            </a>
+            <a className="spacedlink" href={`https://www.instagram.com/fh.nelth`}>
+                <FontAwesomeIcon icon={faInstagram} size={`lg`}/>
+            </a>
+        </div>
+    )
+}
 
-export default class SinglePageHeader extends Component {
-    state = {
-        pro: [
-            'an Ex-Physicist.', 500,
-            'a Photographer.', 1000,
-            'a Software developer.', 1000
-        ]
-    }
+export default class IndexHeader extends Component {
     render() {
         return (
             <div className="header">
@@ -48,13 +56,9 @@ export default class SinglePageHeader extends Component {
                 </BrandBox>
                 <TextBox>
                     <HeadingPrimary>
-                        <span style={{ fontSize: `1.2em`, fontWeight: 550 }}>Hi I'm</span>
                         <h1>Florent HAFFNER,</h1>
-                        <Typical
-                            steps={this.state.pro}
-                            loop={1}
-                            wrapper="h3"
-                        />
+                        <h5>Software developer, soon starting an Internship at <WhiteLink to={`https://finalgo.fr`}>Finalgo</WhiteLink>.</h5>
+                        <SocialLink />
                     </HeadingPrimary>
                 </TextBox>
             </div>

@@ -11,9 +11,10 @@ class FetchedProjects extends Component {
 
     componentDidMount() {
         this.setState({ isLoading: true })
+
         fetch('https://api.github.com/users/nelth-fr/repos')
-            .then(res => { return res.json() })
-            .then(data => this.setState({ projects: data, isLoading: false }));
+        .then(res => { return res.json() })
+        .then(data => this.setState({ projects: data, isLoading: false }));
     }
 
     render() {

@@ -97,8 +97,8 @@ export const LinkedinIcon = ({ fill = 'white' }) => (
 
 export const MediumIcon = ({ fill = 'white' }) => (
   <svg
-    width="13"
-    height="11"
+    width="26"
+    height="23"
     viewBox="0 0 13 11"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
