@@ -4,6 +4,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
