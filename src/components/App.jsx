@@ -1,0 +1,32 @@
+import React, { useState, useEffect } from 'react';
+import Hero from './Hero/Hero';
+import StatusBar from './StatusBar/StatusBar';
+import { PortfolioProvider } from '../context/context';
+import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+// import Chat from './Chat/Chat';
+
+function App() {
+  const [hero, setHero] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProjects] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setAbout({ ...aboutData });
+    setProjects([...projectsData]);
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
+  return (
+    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+      <StatusBar />
+      <Hero />
+      {/*<Chat />*/}
+    </PortfolioProvider>
+  );
+}
+
+export default App;

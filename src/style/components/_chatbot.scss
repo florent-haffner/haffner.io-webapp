@@ -1,0 +1,160 @@
+input {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  outline: none;
+  width: 100%;
+}
+
+.chatbot-window {
+  color: black;
+  position: fixed;
+  height: 70vh;
+  width: 50vh;
+  bottom: 25px;
+  right: 25px;
+  background-color: white;
+  border-radius: 5px;
+
+  @include respond(tab-land) {
+  height: 90vh;
+  width: 85vh;
+  bottom: 5vh;
+  right: 7vh;
+  padding-top: 3vh;
+  }
+  @include respond(tab-port) {
+    height: 96vh;
+    width: 53vh;
+    bottom: 10px;
+    right: 10px;
+    padding-top: 6vh;
+  }
+
+  .top {
+    position: fixed;
+    font-size: large;
+
+    p {
+      position: relative;
+      top: 2vh;
+      left: 16vh;
+      @include respond(tab-land) {
+        position: relative;
+        top: 0vh;
+        left: 35vh;
+      }
+      @include respond(tab-port) {
+        position: relative;
+        top: -3vh;
+        left: 16vh;
+      }
+    }
+
+    .fa-times {
+      color: red;
+      position: relative;
+      top: -1.5vh;
+      right: -37vh;
+      @include respond(tab-land) {
+        position: relative;
+        top: -3.5vh;
+        right: -72vh;
+      }
+      @include respond(tab-port) {
+        position: relative;
+        top: -6.5vh;
+        right: -39vh;
+      }
+      @include respond(phone) {
+        position: relative;
+        top: -8.5vh;
+        right: -35vh;
+      }
+    }
+  }
+
+  .dialog {
+    margin-top: 4vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    text-align: justify;
+    max-height: 59vh;
+    font-size: medium;
+    overflow-y: scroll;
+    @include respond(tab-land) {
+      font-size: large;
+      margin-top: 3vh;
+      max-height: 77vh;
+    }
+    @include respond(tab-port) {
+      font-size: large;
+      margin-top: 1vh;
+      max-height: 80vh;
+    }
+
+    .message {
+      margin: 1vh 1vh;
+      padding: 2vh 2vh 2vh 2vh;
+      background-color: lightgray;
+      border-radius: 10px;
+    }
+    
+  }
+
+    input {
+      position: fixed;
+      margin: 1vh 1vh 1vh 1vh;
+      bottom: 35px;
+      width: 46vh;
+      font-size: medium;
+      @include respond(tab-land) {
+        bottom: 6vh;
+        width: 80vh;
+      }
+      @include respond(tab-port) {
+        bottom: 2.5vh;
+        width: 49vh;
+      }
+    }
+
+}
+
+
+.chatbot-button {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  div {
+    background-color: white;
+    border-radius: 50%;
+    max-height: 14vh;
+    max-width: 16vh;
+    &:hover {
+        background-color: $dark-grey;
+    }
+    @include respond(phone) {
+      max-height: 12vh;
+      max-width: 16vh;
+    }
+    @include respond(tab-port) {
+      max-height: 7vh;
+      max-width: 10vh;
+    }
+  }
+
+  a {
+    flex-direction: column;
+    color: $primary-color;
+    font-size: 3rem;
+    width: 5rem; height: 5rem;
+    margin: $default-font-size $default-font-size;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
