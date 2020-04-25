@@ -6,15 +6,16 @@
 @import './base/typography';
 
 @import './components/buttons';
-@import './components/chatbot';
 @import './components/statusBar';
 
 @import './layout/footer';
 @import './layout/sections';
+@import './layout/404';
 
 @import './sections/about';
 @import './sections/contact';
 @import './sections/hero';
 @import './sections/projects';
+@import './sections/chatbot';
 
 @import './vendor/css/font-awesome.min.css';

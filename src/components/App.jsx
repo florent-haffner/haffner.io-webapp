@@ -3,7 +3,7 @@ import Hero from './Hero/Hero';
 import StatusBar from './StatusBar/StatusBar';
 import { PortfolioProvider } from '../context/context';
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
-// import Chat from './Chat/Chat';
+import Chat from './Chat/Chat';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -24,7 +24,7 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <StatusBar />
       <Hero />
-      {/*<Chat />*/}
+      <Chat />
     </PortfolioProvider>
   );
 }

@@ -54,7 +54,7 @@ const Chat = () => {
           <i className="fa fa-times" onClick={() => handleChatVisibility()} />
         </div>
         <div className="dialog">
-          <MessageComponent textToShow="Welcome on this chatbot. I must inform you that this is an early release. This AI will be feeded and tweaked until the result is compeling." />
+          <MessageComponent textToShow="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
           {messages.map(msg => (
             <MessageComponent textToShow={msg.message} />
           ))}
