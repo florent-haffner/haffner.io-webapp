@@ -56,9 +56,15 @@ const Chat = () => {
   }
 
   useEffect(() => {
+    /* TODO : should be used only for dev purpose */
     setChatVisibility(true);
-    const generatedUserId: string = generateUuidV4();
-    setUserId(generatedUserId);
+
+    let uuid: string = localStorage.getItem('haffnerio-chat-uuid');
+    if (uuid === undefined || uuid === null) {
+      uuid = generateUuidV4();
+      localStorage.setItem('haffnerio-chat-uuid', uuid);
+    }
+    setUserId(uuid);
   }, []);
 
   if (isChatVisible) {
