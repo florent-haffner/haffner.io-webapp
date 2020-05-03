@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+// @ts-ignore // To mask the tslint issue with React import...
+import React, { useEffect, useState } from 'react';
+import getApiUrl from '../../service/Chat.service';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
-  const [isChatVisible, setChatVisiblity] = useState(false);
+  const [isChatVisible, setChatVisibility] = useState(false);
   const [userId, setUserId] = useState('');
 
   const MessageComponent = ({ textToShow }) => (
@@ -12,39 +14,52 @@ const Chat = () => {
     </div>
   );
 
-  /**
-   * Handle state update from store
-   */
-  useEffect(() => {
-    setChatVisiblity(true);
-    const generatedUserId = uuidv4();
-    setUserId(generatedUserId);
-  }, []);
-
-  function addMessage(event) {
-    if (event.key === 'Enter') {
-      if (inputValue.length !== 0) {
-        const msgToAdd = { message: inputValue };
-        setMessages([...messages, msgToAdd]);
-        setInputValue('');
-      }
-    }
+  function generateUuidV4(): string {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      const r: number = (Math.random() * 16) | 0;
+      const v = c === 'x' ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
   }
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
   }
 
-  function handleChatVisibility() {
-    setChatVisiblity(!isChatVisible);
+  function handleChatVisibility(): void {
+    setChatVisibility(!isChatVisible);
   }
 
-  function uuidv4() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-      const r = Math.random() * 16 | 0; let v = c == 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
-    });
+  function sendMessageToAPI(message): Promise<void> {
+    return fetch(`${getApiUrl()}chatbot/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*/*' },
+      mode: 'cors',
+      body: JSON.stringify(message),
+    }).then(response => response.json());
   }
+
+  function updateMessageState(): void {
+    const msgToAdd = { textToShow: inputValue, userId };
+    // useEffect(() => {
+    //   const response: Promise<void> = sendMessageToAPI(msgToAdd);
+    //   response.then(r => r);
+    // });
+    setMessages([...messages, msgToAdd]);
+    setInputValue('');
+  }
+
+  function addMessage(event): void {
+    if (event.key === 'Enter' && inputValue.length !== 0) {
+      updateMessageState();
+    }
+  }
+
+  useEffect(() => {
+    setChatVisibility(true);
+    const generatedUserId: string = generateUuidV4();
+    setUserId(generatedUserId);
+  }, []);
 
   if (isChatVisible) {
     return (
@@ -54,10 +69,14 @@ const Chat = () => {
           <i className="fa fa-times" onClick={() => handleChatVisibility()} />
         </div>
         <div className="dialog">
+          {/* TODO : the chatbot should return a list of messages or greet the user */}
           <MessageComponent textToShow="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
+
+          {/* Mapping through conversation */}
           {messages.map(msg => (
-            <MessageComponent textToShow={msg.message} />
+            <MessageComponent textToShow={msg.textToShow} />
           ))}
+
           <input
             placeholder="Type your message here..."
             value={inputValue}
