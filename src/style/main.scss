@@ -1,21 +1,28 @@
+// UI config
 @import './abstracts/mixins';
 @import './abstracts/variables';
 @import './abstracts/helpers';
 
+// Typo and design stuff
 @import './base/base';
 @import './base/typography';
+@import './vendor/css/font-awesome.min.css';
 
-@import './components/buttons';
-@import './components/statusBar';
-
-@import './layout/footer';
-@import './layout/sections';
+// Pages
 @import './layout/404';
 
+// Sections
 @import './sections/about';
 @import './sections/contact';
 @import './sections/hero';
 @import './sections/projects';
 @import './sections/chatbot';
 
-@import './vendor/css/font-awesome.min.css';
+// Components
+@import './components/buttons';
+@import './components/statusBar';
+
+// Layouts
+@import './layout/sections';
+@import './layout/footer';
+

@@ -84,7 +84,7 @@ export const footerData = {
     {
       id: uuidv1(),
       name: 'github',
-      url: 'https://github.com/nelth-fr',
+      url: 'https://github.com/florent-haffner',
     },
   ],
 };
