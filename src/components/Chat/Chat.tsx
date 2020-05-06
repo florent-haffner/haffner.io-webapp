@@ -1,16 +1,16 @@
 // @ts-ignore // To mask the tslint issue with React import...
 import React, { useEffect, useState } from 'react';
-import getApiUrl from '../../service/Chat.service';
+import MessageDataService from '../../service/chat.service';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isChatVisible, setChatVisibility] = useState(false);
-  const [userId, setUserId] = useState('');
+  const [conversationId, setConversationId] = useState('');
 
-  const MessageComponent = ({ textToShow }) => (
+  const MessageComponent = data => (
     <div key={messages.length} className="message">
-      {textToShow}
+      {data.text}
     </div>
   );
 
@@ -30,22 +30,25 @@ const Chat = () => {
     setChatVisibility(!isChatVisible);
   }
 
-  function sendMessageToAPI(message): Promise<void> {
-    return fetch(`${getApiUrl()}chatbot/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*/*' },
-      mode: 'cors',
-      body: JSON.stringify(message),
-    }).then(response => response.json());
-  }
+  // function sendMessageToAPI(message): Promise<void> {
+  //   return fetch(`${getApiUrl()}chatbot`, {
+  //     method: 'PUT',
+  //     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*/*' },
+  //     mode: 'cors',
+  //     body: JSON.stringify(message),
+  //   }).then(response => response.json());
+  // }
 
+  const retrieveMessages = uuid => {
+    MessageDataService.getAllByUUID(uuid).then(response => {
+      setMessages(response.data);
+    });
+  };
   function updateMessageState(): void {
-    const msgToAdd = { textToShow: inputValue, userId };
-    // useEffect(() => {
-    //   const response: Promise<void> = sendMessageToAPI(msgToAdd);
-    //   response.then(r => r);
-    // });
-    setMessages([...messages, msgToAdd]);
+    const msgToAdd = { messageRequest: inputValue, conversationId };
+    MessageDataService.create(msgToAdd).then(r => {
+      retrieveMessages(conversationId);
+    });
     setInputValue('');
   }
 
@@ -54,6 +57,18 @@ const Chat = () => {
       updateMessageState();
     }
   }
+
+  /*
+    const findByTitle = () => {
+    TutorialDataService.findByTitle(searchTitle)
+      .then(response => {
+        setTutorials(response.data);
+        console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  */
 
   useEffect(() => {
     /* TODO : should be used only for dev purpose */
@@ -64,7 +79,8 @@ const Chat = () => {
       uuid = generateUuidV4();
       localStorage.setItem('haffnerio-chat-uuid', uuid);
     }
-    setUserId(uuid);
+    setConversationId(uuid);
+    retrieveMessages(uuid);
   }, []);
 
   if (isChatVisible) {
@@ -76,11 +92,11 @@ const Chat = () => {
         </div>
         <div className="dialog">
           {/* TODO : the chatbot should return a list of messages or greet the user */}
-          <MessageComponent textToShow="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
+          <MessageComponent text="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
 
           {/* Mapping through conversation */}
           {messages.map(msg => (
-            <MessageComponent textToShow={msg.textToShow} />
+            <MessageComponent text={msg.text} />
           ))}
 
           <input
