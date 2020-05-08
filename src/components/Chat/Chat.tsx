@@ -26,7 +26,7 @@ const Chat = () => {
     });
   }
 
-  function handleInputChange(event) {
+  function handleInputChange(event): void {
     setInputValue(event.target.value);
   }
 
