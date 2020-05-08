@@ -6,9 +6,11 @@
   font-size: 1.5rem;
   @include respond(tab-port) {
     padding: 1vh 1vh 1vh 1vh;
+    font-size: 1rem;
   }
   @include respond(phone) {
     padding: .5vh .5vh .5vh .5vh;
+    font-size: 1rem;
   }
 
   .status-success {
@@ -26,8 +28,8 @@
     text-align: center;
     justify-content: center;
     @include respond(phone) {
-      flex-direction: column;
-      margin: 1vh 0vh 1vh 0vh;
+      margin: .5vh 0 .5vh 0;
+      justify-content: space-evenly;
     }
   }
 }
