@@ -70,9 +70,6 @@ const Chat = () => {
           <i className="fa fa-times" onClick={() => handleChatVisibility()} />
         </div>
         <div className="dialog">
-          {/* TODO : the chatbot should return a list of messages or greet the user */}
-          <ChatbotMessageComponent text="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
-
           {/* Mapping through conversation */}
           {messages.map(msg => {
             if (msg.userId) {
