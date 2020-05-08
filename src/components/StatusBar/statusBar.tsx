@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import ServerStateServer from '../../service/servers-state.service';
-
 
 const StatusBar = () => {
   const [chatbotOnline, setChatbotOnline] = useState(false);
@@ -21,37 +20,42 @@ const StatusBar = () => {
   const ServerStates = () => {
     if (serverOnline) {
       return (
-        <div>
-          Server : <p>online</p>
+        <div className="container">
+          <div>Server status</div>
+          <div className="status-success">online</div>
         </div>
       );
     }
     return (
-      <div>
-        Server : <p>offline</p>
+      <div className="container">
+        <div>Server status</div>
+        <div className="status-pending">sleeping</div>
       </div>
     );
- };
+  };
   const ChatbotServerStates = () => {
     if (chatbotOnline) {
       return (
-        <div>
-          Chatbot : <p>online</p>
+        <div className="container">
+          <div>Chatbot status</div>
+          <div className="status-success">online</div>
         </div>
       );
     }
     return (
-      <div>
-        Chatbot: <p>offline</p>
+      <div className="container">
+        <div>Chatbot status</div>
+        <div className="status-pending">sleeping</div>
       </div>
     );
   };
 
   return (
     <div className="status-bar">
-      <ServerStates />
-      <ChatbotServerStates />
-      <p>2020-05-08 - This webapp is an early release.</p>
+      <div className="container">
+        <ServerStates />
+        <ChatbotServerStates />
+      </div>
     </div>
   );
 };

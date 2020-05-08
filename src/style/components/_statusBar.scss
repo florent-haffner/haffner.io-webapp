@@ -1,6 +1,33 @@
 .status-bar {
   padding: 2vh 2vh 2vh 2vh;
   background-color: #22232c;
-  color: #FA632B;
-  border: #FA632B 1px solid;
+  color: white;
+  border: #3e404c 1px solid;
+  font-size: 1.5rem;
+  @include respond(tab-port) {
+    padding: 1vh 1vh 1vh 1vh;
+  }
+  @include respond(phone) {
+    padding: .5vh .5vh .5vh .5vh;
+  }
+
+  .status-success {
+    margin-left: .5vh;
+    color: greenyellow;
+  }
+  .status-pending {
+    margin-left: 1vh;
+    color: gold;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    @include respond(phone) {
+      flex-direction: column;
+      margin: 1vh 0vh 1vh 0vh;
+    }
+  }
 }
