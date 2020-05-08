@@ -136,19 +136,19 @@ input {
   div {
     background-color: white;
     border-radius: 50%;
-    max-height: 14vh;
-    max-width: 16vh;
+    max-height: 12vh;
+    max-width: 12vh;
 
     &:hover {
       background-color: $dark-grey;
     }
 
     @include respond(phone) {
-      max-height: 12vh;
-      max-width: 16vh;
+      max-height: 8vh;
+      max-width: 8vh;
     }
     @include respond(tab-port) {
-      max-height: 7vh;
+      max-height: 10vh;
       max-width: 10vh;
     }
   }
@@ -157,8 +157,8 @@ input {
     flex-direction: column;
     color: $primary-color;
     font-size: 3rem;
-    width: 5rem;
-    height: 5rem;
+    height: 4rem;
+    width: 4rem;
     margin: $default-font-size $default-font-size;
     transition: all 0.2s ease-in;
 
