@@ -17,15 +17,15 @@ input {
   border-radius: 5px;
 
   @include respond(tab-land) {
-  height: 90vh;
-  width: 85vh;
-  bottom: 5vh;
-  right: 7vh;
-  padding-top: 3vh;
+    min-height: 90vh;
+    min-width: 85vh;
+    bottom: 5vh;
+    right: 7vh;
+    padding-top: 3vh;
   }
   @include respond(tab-port) {
-    height: 96vh;
-    width: 53vh;
+    min-height: 96vh;
+    min-width: 53vh;
     bottom: 10px;
     right: 10px;
     padding-top: 6vh;
@@ -54,22 +54,22 @@ input {
     .fa-times {
       color: red;
       position: relative;
-      top: -1.5vh;
-      right: -37vh;
+      top: 1.25vh;
+      right: -45vh;
       @include respond(tab-land) {
         position: relative;
-        top: -3.5vh;
-        right: -72vh;
+        top: -1vh;
+        right: -80vh;
       }
       @include respond(tab-port) {
         position: relative;
-        top: -6.5vh;
-        right: -39vh;
+        top: -4vh;
+        right: -48vh;
       }
       @include respond(phone) {
         position: relative;
-        top: -8.5vh;
-        right: -35vh;
+        top: -3vh;
+        right: -45vh;
       }
     }
   }
@@ -93,30 +93,37 @@ input {
       max-height: 80vh;
     }
 
-    .message {
+    .message-user {
       margin: 1vh 1vh;
       padding: 2vh 2vh 2vh 2vh;
-      background-color: lightgray;
+      background-color: #d4d4d4;
       border-radius: 10px;
     }
-    
+
+    .message-bot {
+      margin: 1vh 1vh;
+      padding: 2vh 2vh 2vh 2vh;
+      border-radius: 10px;
+      background-color: #d4c5b5;
+    }
+
   }
 
-    input {
-      position: fixed;
-      margin: 1vh 1vh 1vh 1vh;
-      bottom: 35px;
-      width: 46vh;
-      font-size: medium;
-      @include respond(tab-land) {
-        bottom: 6vh;
-        width: 80vh;
-      }
-      @include respond(tab-port) {
-        bottom: 2.5vh;
-        width: 49vh;
-      }
+  input {
+    position: fixed;
+    margin: 1vh 1vh 1vh 1vh;
+    bottom: 35px;
+    width: 46vh;
+    font-size: medium;
+    @include respond(tab-land) {
+      bottom: 6vh;
+      width: 80vh;
     }
+    @include respond(tab-port) {
+      bottom: 2.5vh;
+      width: 49vh;
+    }
+  }
 
 }
 
@@ -131,9 +138,11 @@ input {
     border-radius: 50%;
     max-height: 14vh;
     max-width: 16vh;
+
     &:hover {
-        background-color: $dark-grey;
+      background-color: $dark-grey;
     }
+
     @include respond(phone) {
       max-height: 12vh;
       max-width: 16vh;
@@ -148,7 +157,8 @@ input {
     flex-direction: column;
     color: $primary-color;
     font-size: 3rem;
-    width: 5rem; height: 5rem;
+    width: 5rem;
+    height: 5rem;
     margin: $default-font-size $default-font-size;
     transition: all 0.2s ease-in;
 

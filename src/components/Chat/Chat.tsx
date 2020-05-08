@@ -9,11 +9,15 @@ const Chat = () => {
   const [conversationId, setConversationId] = useState('');
 
   const MessageComponent = data => (
-    <div key={messages.length} className="message">
+    <div key={data.id} className="message message-user">
       {data.text}
     </div>
   );
-
+  const ChatbotMessageComponent = data => (
+    <div key={data.id} className="message-bot">
+      {data.text}
+    </div>
+  );
   function generateUuidV4(): string {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
       const r: number = (Math.random() * 16) | 0;
@@ -30,15 +34,6 @@ const Chat = () => {
     setChatVisibility(!isChatVisible);
   }
 
-  // function sendMessageToAPI(message): Promise<void> {
-  //   return fetch(`${getApiUrl()}chatbot`, {
-  //     method: 'PUT',
-  //     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*/*' },
-  //     mode: 'cors',
-  //     body: JSON.stringify(message),
-  //   }).then(response => response.json());
-  // }
-
   const retrieveMessages = uuid => {
     MessageDataService.getAllByUUID(uuid).then(response => {
       setMessages(response.data);
@@ -46,7 +41,7 @@ const Chat = () => {
   };
   function updateMessageState(): void {
     const msgToAdd = { messageRequest: inputValue, conversationId };
-    MessageDataService.create(msgToAdd).then(r => {
+    MessageDataService.create(msgToAdd).then(() => {
       retrieveMessages(conversationId);
     });
     setInputValue('');
@@ -58,22 +53,7 @@ const Chat = () => {
     }
   }
 
-  /*
-    const findByTitle = () => {
-    TutorialDataService.findByTitle(searchTitle)
-      .then(response => {
-        setTutorials(response.data);
-        console.log(response.data);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  */
-
   useEffect(() => {
-    /* TODO : should be used only for dev purpose */
-    setChatVisibility(true);
-
     let uuid: string = localStorage.getItem('haffnerio-chat-uuid');
     if (uuid === undefined || uuid === null) {
       uuid = generateUuidV4();
@@ -87,17 +67,19 @@ const Chat = () => {
     return (
       <div className="chatbot-window">
         <div className="top">
-          <p>Status: STANDALONE</p>
           <i className="fa fa-times" onClick={() => handleChatVisibility()} />
         </div>
         <div className="dialog">
           {/* TODO : the chatbot should return a list of messages or greet the user */}
-          <MessageComponent text="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
+          <ChatbotMessageComponent text="Welcome on this chatbot. This AI is in early releases, it will be feeded and tweaked until the result is compeling." />
 
           {/* Mapping through conversation */}
-          {messages.map(msg => (
-            <MessageComponent text={msg.text} />
-          ))}
+          {messages.map(msg => {
+            if (msg.userId) {
+              return <ChatbotMessageComponent key={msg.id} text={msg.text} />;
+            }
+            return <MessageComponent key={msg.id} text={msg.text} />;
+          })}
 
           <input
             placeholder="Type your message here..."
