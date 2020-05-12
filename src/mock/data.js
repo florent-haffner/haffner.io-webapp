@@ -2,7 +2,7 @@ import uuidv1 from 'uuid/v1';
 
 // HEAD DATA
 export const headData = {
-  title: 'haffner.io - Florent HAffner', // e.g: 'Name | Developer'
+  title: 'haffner.io - Florent Haffner', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'Welcome on the website of Florent HAFFNER', // e.g: Welcome to my website
 };
@@ -12,7 +12,7 @@ export const heroData = {
   title: '',
   name: 'Florent HAFFNER',
   subtitle:
-    "I'm a Software developer interested in high quality web products and data engineering.",
+    "I'm a Software developer interested in System design, Data Engineering and Software Craftsmanship.",
   cta: '',
 };
 
