@@ -11,8 +11,7 @@ export const headData = {
 export const heroData = {
   title: '',
   name: 'Florent HAFFNER',
-  subtitle:
-    "I'm a Software developer interested in high quality web products and data engineering.",
+  subtitle: "I'm a Software developer.",
   cta: '',
 };
 
@@ -69,7 +68,7 @@ export const footerData = {
     {
       id: uuidv1(),
       name: 'twitter',
-      url: 'https://twitter.com/nelth_fr',
+      url: 'https://twitter.com/nelth_fr/',
     },
     /* {
       id: uuidv1(),
@@ -84,12 +83,12 @@ export const footerData = {
     {
       id: uuidv1(),
       name: 'github',
-      url: 'https://github.com/nelth-fr',
+      url: 'https://github.com/florent-haffner/',
     },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
