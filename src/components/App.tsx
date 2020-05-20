@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Hero from './Hero/Hero';
-import StatusBar from './StatusBar/statusBar';
-import Chat from './Chat/Chat';
 
 import { PortfolioProvider } from '../context/context';
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
@@ -23,9 +21,7 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
-      <StatusBar />
       <Hero />
-      <Chat />
     </PortfolioProvider>
   );
 }
