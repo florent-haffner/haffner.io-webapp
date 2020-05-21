@@ -3,16 +3,16 @@
   color: $white-color;
   min-height: 100vh;
   height: 100vh;
-  display: flex;
-  align-items: center;
   border-bottom: 0px;
+  font-size: 2rem;
   font-weight: 400;
-  padding: 0rem 8rem;
-  margin-bottom: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  padding: 8rem 8rem;
+  //align-items: center;
+  //margin-bottom: 0;
+  //top: 0;
+  //left: 0;
+  //bottom: 0;
+  //right: 0;
   z-index: -1;
 
   // If you want to set a background image on the hero section, uncomment these with yout custom image
@@ -24,48 +24,58 @@
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
+}
 
-  .not-found-title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 3.2rem;
-    text-align: left;
+.container-card {
+  padding-top: 8vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
-    @include respond(tab-land) {
-      font-size: 3rem;
-    }
-    @include respond(tab-port) {
-      font-size: 2.6rem;
-      text-align: center;
-    }
-    @include respond(phone) {
-      font-size: 2.5rem;
-      line-height: 1.5;
-    }
-    @include respond(phone-xs) {
-      font-size: 2.4rem;
-    }
+/**
+ * Handle the nbr of item per column computation : set for 3 item
+ */
+.container-card > * {
+  flex: 0.25 0.25 33.33%;
+  margin: 3vh 0vh 3vh 0vh;
+  @include respond(tab-port) {
+    flex: 0 0 50%;
+    margin: 2vh 1vh 2vh 1vh;
   }
-  a {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 3.2rem;
-    text-align: left;
-
-    @include respond(tab-land) {
-      font-size: 3rem;
-    }
-    @include respond(tab-port) {
-      font-size: 2.6rem;
-      text-align: center;
-    }
-    @include respond(phone) {
-      font-size: 2.5rem;
-      line-height: 1.5;
-    }
-    @include respond(phone-xs) {
-      font-size: 2.4rem;
-    }
+  @include respond(tab-land) {
+    flex: 0 0 33%;
+    margin: 1vh 1vh 1vh 1vh;
+  }
+  @include respond(phone) {
+    flex: 1 1 100%;
+    margin: 2vh 1vh 2vh 1vh;
   }
 }
 
+/**
+ * Handle the design of the card
+ */
+.project-card {
+  border: slategrey 1px solid ;
+  text-align: center;
+  min-height: 12vh;
+  width: 45vh;
+  padding: 4vh 2vh 4vh 2vh;
+
+  color: darkgrey;
+}
+.project-card:hover {
+  background-color: $light-grey;
+}
+
+.card-title {
+  font-weight: bold;
+  padding: 1vh 1vh 1vh 1vh;
+}
+
+.card-content{
+  color: white;
+  //color: slategrey;
+}
