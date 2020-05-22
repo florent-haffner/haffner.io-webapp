@@ -70,6 +70,12 @@ const Chat = () => {
           <i className="fa fa-times" onClick={() => handleChatVisibility()} />
         </div>
         <div className="dialog">
+          <ChatbotMessageComponent
+            key={0}
+            text="Welcome on this chatbot designed by Florent HAFFNER.
+            You can ask for help, tell it why you need a developer or ask stuff about culture, philosophy
+            or the architecture behind this webapp ;)"
+          />
           {/* Mapping through conversation */}
           {messages.map(msg => {
             if (msg.userId) {
