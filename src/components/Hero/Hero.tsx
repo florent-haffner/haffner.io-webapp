@@ -28,9 +28,9 @@ const Hero = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Your Name'}</span>
+            <span className="text-color-main">{name || 'Florent HAFFNER'}</span>
             <br />
-            {subtitle || "I'm a Developer."}
+            {subtitle || "I'm a Software Developer."}
           </h1>
         </Fade>
         {/*<Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
@@ -47,7 +47,7 @@ const Hero = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  href={url || 'https://github.com/florent-haffner/'}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}
