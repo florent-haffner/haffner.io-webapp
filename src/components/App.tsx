@@ -3,7 +3,7 @@ import Hero from './Hero/Hero';
 
 import { PortfolioProvider } from '../context/context';
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
-import Chat from "./Chat/Chat";
+// import Chat from "./Chat/Chat";
 
 function App() {
   const [hero, setHero] = useState({});
@@ -23,7 +23,7 @@ function App() {
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
-      <Chat />
+      {/* <Chat /> */}
     </PortfolioProvider>
   );
 }
