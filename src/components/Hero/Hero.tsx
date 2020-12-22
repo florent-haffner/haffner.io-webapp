@@ -30,7 +30,7 @@ const Hero = () => {
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Florent HAFFNER'}</span>
             <br />
-            {subtitle || "I'm a Software Developer."}
+            {subtitle || "I'm a Software Engineer."}
           </h1>
         </Fade>
         {/*<Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
