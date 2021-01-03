@@ -12,7 +12,7 @@ export const heroData = {
   title: '',
   name: 'Florent HAFFNER',
   subtitle:
-    "I'm a Data-science apprentice 🐣🤖. I'm interested in Data engineering, system design and making useful data product.",
+    "I'm a Data-science apprentice 🐣🤖 I'm interested in Data engineering, system design and making useful data product.",
   cta: 'See projects sandbox',
 };
 
