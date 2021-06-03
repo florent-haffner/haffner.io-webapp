@@ -1,6 +1,5 @@
 # haffner.io - Webapp
 
-[![Build Status](https://travis-ci.org/nelth-fr/haffner.io.svg?branch=master)](https://travis-ci.org/nelth-fr/haffner.io)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dc414cbf-402d-4ee6-87a3-997935441a3c/deploy-status)](https://app.netlify.com/sites/haffner-io/deploys)
 
 ## Development
